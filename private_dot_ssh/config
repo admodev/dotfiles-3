@@ -1,0 +1,32 @@
+HashKnownHosts no
+
+Host github.com
+  User git
+
+Host gitlab.com
+  User git
+
+Host bitbucket.org
+  User git
+
+Host rockpro64
+  HostName 10.0.0.124
+  User jas
+
+Host scientia
+  HostName 10.0.0.140
+  User jas
+
+Host bastion.fedoraproject.org
+  HostName bastion-iad01.fedoraproject.org
+  User hyperreal
+  ProxyCommand none
+  ForwardAgent no
+
+Host *.iad2.fedoraproject.org *.qa.fedoraproject.org 10.3.160.* 10.3.161.* 10.3.163.* 10.3.165.* 10.3.167.* *.vpn.fedoraproject.org batcave01
+  User hyperreal
+  ProxyCommand ssh -W %h:%p bastion.fedoraproject.org
+
+Host envs.net
+  HostName envs.net
+  User hyperreal

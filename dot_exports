@@ -1,0 +1,43 @@
+# paths
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+
+# GOPATH
+export GOPATH="${HOME}/go"
+
+# GOROOT
+export GOROOT="/usr/local/go"
+
+# Update path for Go
+export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+
+# Rust path
+export PATH="${HOME}/.cargo/bin:${PATH}"
+
+# Snaps path
+export PATH="/snap/bin:${PATH}"
+
+# user paths
+export PATH="${HOME}/bin:${HOME}/.local/bin:${HOME}/scripts:${PATH}"
+
+# check if inside tmux
+if ! [ -n "$TMUX" ]; then
+   export TERM="xterm-256color";
+else
+   export TERM="screen-256color";
+fi
+
+export PAGER="less -X"
+
+# check if most installed, else use less
+if [[ -f "$(command -v bat)" ]]; then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'";
+else
+  export MANPAGER=$PAGER;
+fi
+
+export BAT_THEME="Dracula"
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export EDITOR="nvim"
+export HISTSIZE=5000
+export HISTDUP=erase

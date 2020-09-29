@@ -1,0 +1,21 @@
+# Disable specific steps - same options as the command line flag
+disable = ["go", "system"]
+
+# Do not ask to retry failed steps (default: false)
+no_retry = true
+
+# Cleanup temporary or old files
+cleanup = true
+
+# Additional git repositories to pull
+[git]
+max_concurrency=5
+repos = [
+    "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions",
+    "~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting",
+    "~/.oh-my-zsh/custom/themes/spaceship-prompt",
+    "~/sites/*",
+    "~/src/*/"
+]
+
+

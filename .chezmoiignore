@@ -1,0 +1,19 @@
+README.md
+etc
+
+{{- if eq .chezmoi.os "windows" }}
+.config
+.weechat
+.aliases
+.dircolors
+.exports
+.functions
+.tmux.conf.local
+.zshrc
+.hushlogin
+{{- end }}
+
+{{- if ne .chezmoi.os "windows" }}
+AppData
+OneDrive
+{{- end }}

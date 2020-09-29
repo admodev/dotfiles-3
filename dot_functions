@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# create a new directory and enter it
+mkd() { mkdir -p "$@" && cd "$_" ;}
+
+restart() { exec $SHELL $SHELL_ARGS "$@" ;}
+rsrc() { cd && clear && restart ; }
+
+# list pids
+pids() { ps aux | grep "$1" ;}
+
+# weather forecast
+wttr() { curl -s wttr.in/~palatine ;}
+
+# cheat.sh
+cheat.sh() { curl cheat.sh/$1 ;}
+
+# gogh
+gogh() { bash -c "$(wget -qO- https://raw.githubusercontent.com/hyperreal64/Gogh/master/gogh.sh)" ;}

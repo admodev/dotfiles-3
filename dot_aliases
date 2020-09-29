@@ -1,0 +1,43 @@
+# apps
+alias irc="weechat"
+alias cim="sudo concentration improve"
+alias clo="sudo concentration lose"
+alias cbr="sudo concentration break"
+
+# network
+alias myip="curl ipinfo.io"
+alias netCons="lsof -i"
+alias openPorts="sudo lsof -i | grep LISTEN"
+alias pong="ping -c 3 www.google.com"
+
+# file management
+alias grep="grep --color"
+alias sgrep="grep -R -n -H -C 5 --exclude-dir={.git} "
+alias t="tail -f"
+alias -g C="| wc -l"
+alias -g H="| head"
+alias -g T="| tail"
+alias -g G="| grep"
+alias -g L="| less"
+alias -g M="| most"
+alias -g LL="2>&1 | less"
+alias -g CA="2>&1 | cat -A"
+alias -g NE="2> /dev/null"
+alias -g NUL="> /dev/null 2>&1"
+alias h="history"
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias lslog="ls /var/log/"
+alias ls="lsd"
+alias la="ls -a"
+alias ll="ls -l"
+alias lal="ls -al"
+alias -g CC="| xsel -ib"
+
+# Power management
+alias reboot="sudo reboot"
+alias shut="sudo shutdown now"
+
+## get top 10 shell commands:
+alias top10="print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10"
